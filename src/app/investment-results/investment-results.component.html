@@ -1,5 +1,6 @@
-<p>Please enter some values and press "Calculate"</p>
-
+@if(!results){
+<h3 class="center">Please enter some values and press "Calculate"</h3>
+} @else {
 <table>
   <thead>
     <tr>
@@ -15,10 +16,12 @@
     <tr>
       <td>{{ result.year }}</td>
       <td>{{ result.valueEndOfYear | currency }}</td>
-      <td>{{ result.annualInvestment | currency }}</td>
+      <td>{{ result.interest | currency }}</td>
       <td>{{ result.totalInterest | currency }}</td>
       <td>{{ result.totalAmountInvested | currency }}</td>
     </tr>
     }
   </tbody>
 </table>
+
+}
